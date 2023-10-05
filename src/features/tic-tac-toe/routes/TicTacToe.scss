@@ -1,0 +1,17 @@
+.game-info {
+  span {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+}
+
+.game-board {
+  display: grid;
+  gap: 1px;
+  grid-template-columns: repeat(3, 0fr);
+  justify-content: center;
+
+  &.freeze-board {
+    pointer-events: none;
+  }
+}

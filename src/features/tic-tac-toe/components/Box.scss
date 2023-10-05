@@ -1,0 +1,9 @@
+.game-box {
+  height: 6rem;
+  width: 6rem;
+
+  &.disabled {
+    pointer-events: none;
+    color: #fff;
+  }
+}
