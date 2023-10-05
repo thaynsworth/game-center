@@ -50,14 +50,14 @@ export const TicTacToe = () => {
 
   const renderGameStatus = () => {
     if (winner) {
-      return <span>{ winner } is the WINNER</span>
+      return <span>{ winner === 'X' ? 'Player 1 (X)' : 'Player 2 (O)' } is the WINNER</span>
     }
 
     if (!board.includes(null)) {
       return <span>Draw</span>;
     }
     
-    return <span>{ xIsPlaying ? 'X' : 'O' } is up next</span>;
+    return <span>{ xIsPlaying ? 'Player 1 (X)' : 'Player 2 (O)' } is up</span>;
   }
 
   const resetGame = () => {
