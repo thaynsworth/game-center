@@ -20,9 +20,10 @@ export const TicTacToe = () => {
       [2, 4, 6],
     ];
     // using the predetermined winningCombinations 2d array, check when all 3 match the same value
-    // return the value of the winner (x or o)
     for (const [x, y, z] of winningCombinations) {
-      if ([board[x], board[y], board[z]].every((cell) => cell === board[x])) {
+      // before comparing each index, ensure the initial value is not null. i'm using x but you could use any (x, y, z)
+      if (board[x] && [board[x], board[y], board[z]].every((cell) => cell === board[x])) {
+        // return the value of the winning combination (x or o)
         return board[x];
       }
     }
