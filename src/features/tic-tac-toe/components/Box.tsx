@@ -4,13 +4,18 @@ import './Box.scss'
 type BoxProps = {
   children: React.ReactNode;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
-  disabled: boolean;
+  isDisabled: boolean;
+  isActive: boolean;
 };
 
-export const Box = ({ children, onClick, disabled }: BoxProps) => {
+export const Box = ({ children, onClick, isDisabled, isActive }: BoxProps) => {
   return (
     <Button
-      className={ "game-box" + (disabled ? " disabled" : "") }
+      className={
+        "game-box"
+        + (isDisabled ? " disabled" : "")
+        + (isActive ? " active" : "")
+      }
       variant="outlined"
       size="large"
       onClick={ onClick }

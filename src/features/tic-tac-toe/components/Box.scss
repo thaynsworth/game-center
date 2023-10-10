@@ -6,4 +6,9 @@
     pointer-events: none;
     color: #fff;
   }
+
+  &.active {
+    background-color: lightgreen;
+    color: black;
+  }
 }
